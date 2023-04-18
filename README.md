@@ -1,4 +1,5 @@
 <h1 align="center">Euro NCAP Car Safety Data CSV Recorder Automation</h1>
+<h4 align="center">This application is unofficial</h4>
 
 - **How to use,**
   * **Driver and passenger safety indicator images must be downloaded from EuroNCAP.**
