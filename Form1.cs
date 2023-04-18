@@ -29,7 +29,7 @@ namespace data_miner
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            button2.Enabled = false;
         }
         public List<CsvRecord> csvrecordlist = new List<CsvRecord>();
 
@@ -116,6 +116,7 @@ namespace data_miner
                 csvrecordlist.Add(csvRecord);
             }
             MessageBox.Show("DATA DONE!");
+            button2.Enabled = true;
         }
 
         
@@ -131,7 +132,7 @@ namespace data_miner
                 Encoding = Encoding.UTF8
             };
 
-            using (var writer = new StreamWriter("C:\\Users\\HMK\\Desktop\\file.csv"))
+            using (var writer = new StreamWriter(Environment.CurrentDirectory + "\\data.csv"))
             using (var csv = new CsvWriter(writer, csvConfig))
             {
                 csv.Context.RegisterClassMap<CsvMap>();
